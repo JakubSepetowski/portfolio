@@ -7,12 +7,16 @@ interface Props {
 
 export const NavProvider = (props: Props) => {
 	const [isOpen, setIsOpen] = useState(false);
-	const toggleNavHanndler = () => {
+	const toggleNavHandler = () => {
 		setIsOpen((prev) => !prev);
+	};
+	const closeNavHandler = () => {
+		setIsOpen(false);
 	};
 	const navContext = {
 		isOpen,
-		toggleNav: toggleNavHanndler,
+		toggleNav: toggleNavHandler,
+		closeNav: closeNavHandler,
 	};
 	return <NavContext.Provider value={navContext}>{props.children}</NavContext.Provider>;
 };
