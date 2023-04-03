@@ -2,7 +2,9 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import programming from '../../assets/lotties/programming.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+
 export const AboutHeader = () => {
+	
 	return (
 		<header className='h-screen w-full relative'>
 			<div className=' flex flex-col items-center justify-center md:flex-row md:items-center w-full h-full max-w-7xl p-4 md:p-8 mx-auto'>
@@ -21,7 +23,7 @@ export const AboutHeader = () => {
 					<Player autoplay loop src={programming}></Player>
 				</div>
 			</div>
-			<button className='absolute bottom-5 md:bottom-10 left-1/2 translate-x-[-50%] p-2 animate-pulse  '>
+			<button  className='absolute bottom-5 md:bottom-10 left-1/2 translate-x-[-50%] p-2 animate-pulse  '>
 				<FontAwesomeIcon className='text-xl md:text-2xl lg:text-3xl ' icon={faArrowDown} />
 			</button>
 		</header>
