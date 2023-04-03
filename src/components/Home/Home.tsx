@@ -21,7 +21,7 @@ export const Home = () => {
 	
 
 	return (
-		<header className='h-screen w-full overflow-x-hidden '>
+		<header className='h-screen w-full overflow-x-hidden  '>
 			<div className='max-w-7xl w-full h-full flex flex-col justify-center items-center lg:flex-row lg:items-center lg:justify-between mx-auto p-4 md:p-8 '>
 				
 				<div className='lg:w-1/2 '>
@@ -29,7 +29,7 @@ export const Home = () => {
 						variants={titleAnimation}
 						initial='hidden'
 						animate='show'
-						className='text-3xl text-center md:text-4xl lg:text-left lg:text-5xl xl:text-6xl '>
+						className=' text-3xl text-center md:text-4xl lg:text-left lg:text-5xl xl:text-6xl '>
 						I am here to make your <span className='text-orange-400 '>dreams</span> come true.
 					</motion.h1>
 					<motion.div

@@ -1,3 +1,11 @@
+import { AboutHeader } from '../components/About/AboutHeader';
+import { TechSection } from '../components/About/TechSection';
+
 export const AboutPage = () => {
-	return <h1>About</h1>;
+	return (
+		<>
+			<AboutHeader />
+			<TechSection />
+		</>
+	);
 };

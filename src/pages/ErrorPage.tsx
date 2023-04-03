@@ -9,7 +9,7 @@ export const ErrorPage = () => {
 			<Player autoplay loop src={error} style={{ height: '100%', width: '100%' }}></Player>
 			<Link
 				to='/'
-				className='p-2 pl-3 pr-3 md:pl-4 md:pr-4 mt-2 bg-orange-400 rounded-lg md:text-2xl transition-colors duration-200 hover:text-orange-400 hover:bg-white'>
+				className='p-2 pl-3 pr-3 md:pl-4 md:pr-4 mt-2 bg-orange-400 rounded-lg md:text-2xl transition-colors duration-200 hover:bg-purple-500 '>
 				BACK HOME
 			</Link>
 		</div>
