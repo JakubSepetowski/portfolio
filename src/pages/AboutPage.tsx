@@ -7,9 +7,11 @@ export const AboutPage = () => {
 	return (
 		<>
 			<AboutHeader />
-			<TechSection />
-			<HobbySection/>
-			<Footer/>
+			<main>
+				<TechSection />
+				<HobbySection />
+			</main>
+			<Footer />
 		</>
 	);
 };

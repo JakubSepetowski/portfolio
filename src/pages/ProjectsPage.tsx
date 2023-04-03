@@ -1,3 +1,11 @@
+import { ProjectsHeaders } from '../components/Projects/ProjectsHeader';
+import { ProjectsSection } from '../components/Projects/ProjectsSection';
+
 export const ProjectsPage = () => {
-    return <h1>Projects</h1>
-}
+	return (
+		<>
+			<ProjectsHeaders />
+			<ProjectsSection />
+		</>
+	);
+};
