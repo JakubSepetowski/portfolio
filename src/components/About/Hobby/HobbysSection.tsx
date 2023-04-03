@@ -1,6 +1,6 @@
 import { Section } from '../../common/Section';
 import guitar from '../../../assets/svg/guitar.svg';
-import guitrarEffect from '../../../assets/music/guitar-effect.mp3';
+
 
 export const HobbySection = () => {
 	

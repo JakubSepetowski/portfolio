@@ -1,4 +1,4 @@
-import { Player } from '@lottiefiles/react-lottie-player';
+
 import projects from '../../assets/lotties/projects.json';
 import { Header } from '../common/Header';
 
