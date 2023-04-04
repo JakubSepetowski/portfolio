@@ -15,16 +15,16 @@ export const ProjectsSection = () => {
 			</h2>
 			<div className='w-full flex flex-col justify-center gap-5 '>
 				<div className='flex flex-wrap md:flex-nowrap gap-5 '>
-					<ProjetCard isBig={true} img={news} />
-					<ProjetCard isBig={false} img={form} />
+					<ProjetCard isBig={true} img={news} title="GnNews"/>
+					<ProjetCard isBig={false} img={form} title="Multi step form" />
 				</div>
 				<div className='flex flex-wrap md:flex-nowrap gap-5'>
-					<ProjetCard isBig={false} img={recipe} />
-					<ProjetCard isBig={true} img={rest} />
+					<ProjetCard isBig={false} img={recipe} title='Recipe app' />
+					<ProjetCard isBig={true} img={rest} title="Rest countries" />
 				</div>
 				<div className='flex flex-wrap md:flex-nowrap gap-5'>
-					<ProjetCard isBig={true} img={travell} />
-					<ProjetCard isBig={false} img={eproduct} />
+					<ProjetCard isBig={true} img={travell} title='Travell mark' />
+					<ProjetCard isBig={false} img={eproduct} title="E-product" />
 				</div>
 			</div>
 		</Section>

@@ -6,8 +6,10 @@ export const ProjectsPage = () => {
 	return (
 		<>
 			<ProjectsHeaders />
-			<ProjectsSection />
-			<Footer/>
+			<main>
+				<ProjectsSection />
+			</main>
+			<Footer />
 		</>
 	);
 };

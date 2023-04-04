@@ -1,0 +1,51 @@
+[
+	{
+		"title": "GnNews",
+		"description": "opis",
+		"technologies": [
+			"React",
+			"TypeScript",
+			"Tailwindscss",
+			"React-router",
+			"React-redux",
+			"Rest API"
+		],
+		"repoLink": "https://github.com/JakubSepetowski/news",
+		"liveLink": null
+	},
+	{
+		"title": "Multi step form",
+		"description": "opiss",
+		"technologies": ["React", "TypeScript", "Tailwindscss", "React Context API"],
+		"repoLink": "https://github.com/JakubSepetowski/MultiForm",
+		"liveLink": "https://mutlistepform.netlify.app/"
+	},
+	{
+		"title": "Recipe app",
+		"description": "opiss",
+		"technologies": ["Html", "TypeScript", "Sass"],
+		"repoLink": "https://github.com/JakubSepetowski/recipe-app",
+		"liveLink": "https://jakubsepetowski-recipeapp.netlify.app/"
+	},
+	{
+		"title": "Rest countries",
+		"description": "opiss",
+		"technologies": ["React", "TypeScript", "Tailwindscss", "React-redux", "Rest API"],
+		"repoLink": "https://github.com/JakubSepetowski/rest-countries",
+		"liveLink": "https://mycountry-info.netlify.app/"
+	},
+	{
+		"title": "Travell mark",
+		"description": "opiss",
+		"technologies": ["Html", "JavaScript", "Sass", "Wheater API", "Leaflet"],
+		"repoLink": "https://github.com/JakubSepetowski/Travell-mark-app",
+		"liveLink": "https://jakubsepetowski.github.io/Travell-mark-app/"
+	},
+	{
+		"title": "E-product",
+		"description": "opiss",
+		"technologies": ["React", "TypeScript", "Tailwindscss"],
+		"repoLink": "https://github.com/JakubSepetowski/ecommerce-product",
+		"liveLink": "https://e-prodcut-react.netlify.app/"
+	}
+]

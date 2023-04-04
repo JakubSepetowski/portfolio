@@ -21,6 +21,7 @@ export const Header = (props: Props) => {
 					<p className='md:text-lg lg:text-xl'>{props.text}</p>
 				</div>
 				<div className='md:w-1/2'>
+					
 					<Player className='w-full max-w-md md:max-w-none' autoplay loop src={props.src}></Player>
 				</div>
 			</div>

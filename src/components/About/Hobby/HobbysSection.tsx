@@ -22,10 +22,10 @@ export const HobbySection = () => {
 						sapiente officiis fuga.
 					</p>
 				</div>
-				<div className='w-1/2 mt-10 md:mt-0 md:w-1/3'>
+				<div className='w-1/2 mt-10 md:mt-0 md:w-1/2 flex justify-center items-center'>
 					<img
 						onClick={guitarSoundHandler}
-						className='transition-all duration-200 hover:rotate-6 cursor-pointer'
+						className='w-full max-w-md transition-all duration-200 hover:rotate-6 cursor-pointer'
 						src={guitar}
 						alt='guitar'
 					/>

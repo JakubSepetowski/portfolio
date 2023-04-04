@@ -5,6 +5,7 @@ import { RootLayout } from './pages/RootLayout';
 import { AboutPage } from './pages/AboutPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { ContactPage } from './pages/ContactPage';
+import { ProjectDetailsPage ,getPageData } from './pages/ProjectDetalisPage';
 
 const router = createBrowserRouter([
 	{
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
 			{
 				path: 'projects',
 				element: <ProjectsPage />,
+			},
+			{
+				path: 'projects/project/:projectId',
+				element: <ProjectDetailsPage />,
+				loader: getPageData
 			},
 			{
 				path: 'contact',
