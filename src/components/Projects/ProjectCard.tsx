@@ -20,7 +20,7 @@ export const ProjetCard = (props: Props) => {
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam minus nihil dolor id
 					totam beatae.
 				</p>
-				<Link to={`project/${props.title}`} className='uppercase  text-sm md:text-base'>
+				<Link to={`project/${props.title}`} className='uppercase  text-sm md:text-base text-orange-400 font-semibold'>
 					Learn more...
 				</Link>
 			</div>

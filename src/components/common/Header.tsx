@@ -7,6 +7,7 @@ interface Props {
 	text: string;
 	category: string;
 	src: any;
+	link: boolean;
 }
 
 export const Header = (props: Props) => {
@@ -21,13 +22,14 @@ export const Header = (props: Props) => {
 					<p className='md:text-lg lg:text-xl'>{props.text}</p>
 				</div>
 				<div className='md:w-1/2'>
-					
 					<Player className='w-full max-w-md md:max-w-none' autoplay loop src={props.src}></Player>
 				</div>
 			</div>
-			<button className='absolute bottom-5 md:bottom-10 left-1/2 translate-x-[-50%] p-2 animate-pulse  '>
-				<FontAwesomeIcon className='text-xl md:text-2xl lg:text-3xl ' icon={faArrowDown} />
-			</button>
+			{props.link && (
+				<button className='absolute bottom-5 md:bottom-10 left-1/2 translate-x-[-50%] p-2 animate-pulse  '>
+					<FontAwesomeIcon className='text-xl md:text-2xl lg:text-3xl ' icon={faArrowDown} />
+				</button>
+			)}
 		</header>
 	);
 };

@@ -1,6 +1,8 @@
 import { LoaderFunction, useLoaderData } from 'react-router-dom';
 import { ProjectDetails } from '../types/types';
-import { ProjectInfo } from '../components/ProjectInfo/ProjectInfo';
+import { ProjectInfoHeader } from '../components/ProjectInfo/ProjectInfoHeader';
+import { useScrollTop } from '../hooks/useScrollTop';
+import { Footer } from '../components/Footer/Footer';
 
 export const getPageData: LoaderFunction = async ({ params }) => {
 	const res = await fetch('/projetcsInfo.json');
@@ -10,7 +12,13 @@ export const getPageData: LoaderFunction = async ({ params }) => {
 };
 
 export const ProjectDetailsPage = () => {
+	useScrollTop();
 	const projectDetails = useLoaderData() as ProjectDetails;
 
-	return <ProjectInfo details={projectDetails} />
+	return (
+		<>
+			<ProjectInfoHeader details={projectDetails} />
+			<Footer />
+		</>
+	);
 };
