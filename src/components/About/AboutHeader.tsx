@@ -9,8 +9,7 @@ export const AboutHeader = () => {
 			link={true}
 			src={programming}
 			text='Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium quos, cupiditate
-			id repellat quae alias ad quo similique ut debitis minima incidunt aperiam eos quidem
-			earum numquam eveniet accusamus ea sit a dolores.'
+			id repellat quae alias ad quo similique.'
 		/>
 	);
 };

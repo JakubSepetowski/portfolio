@@ -41,12 +41,11 @@ export const ProjectInfoHeader = ({ details }: Props) => {
 			<Header
 				title={details.title}
 				category='overview.'
-				text=' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium quos, cupiditate
-    					id repellat quae alias ad quo similique ut debitis.Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
+				text={details.overview}
 				src={lottie}
 				link={false}
 			/>
-			<ProjectInfoMain/>
+			<ProjectInfoMain details={details}/>
 		</>
 	);
 };

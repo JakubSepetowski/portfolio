@@ -1,6 +1,7 @@
 export interface ProjectDetails {
 	title: string;
 	description: string;
+    overview: string;
 	technologies: string[];
 	repoLink: string;
 	liveLink: string | null;
