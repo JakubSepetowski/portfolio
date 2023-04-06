@@ -12,6 +12,6 @@ export enum Titles {
 	form = 'Multi step form',
 	recipe = 'Recipe app',
 	countries = 'Rest countries',
-	maps = 'Travell mark',
+	maps = 'Travel mark',
 	shop = 'E-product',
 }

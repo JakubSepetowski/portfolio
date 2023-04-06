@@ -16,9 +16,7 @@ export const Header = (props: Props) => {
 			<div className='w-full h-full max-w-7xl flex flex-col md:flex-row justify-center items-center p-8  mx-auto'>
 				<div className='md:w-1/2 self-start md:self-auto'>
 					<p className='text-sm lg:text-base text-neutral-300'>{props.category}</p>
-					<h1 className='mb-4 text-3xl text-orange-400  md:text-4xl lg:text-5xl'>
-						{props.title}
-					</h1>
+					<h1 className='mb-4 text-3xl text-orange-400  md:text-4xl lg:text-5xl'>{props.title}</h1>
 					<p className='md:text-lg lg:text-xl'>{props.text}</p>
 				</div>
 				<div className=' w-11/12 md:w-1/2'>
