@@ -43,7 +43,7 @@ export const ProjectInfoHeader = ({ details }: Props) => {
 				category='overview.'
 				text={details.overview}
 				src={lottie}
-				link={false}
+			
 			/>
 			<ProjectInfoMain details={details}/>
 		</>

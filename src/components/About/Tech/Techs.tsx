@@ -6,7 +6,10 @@ import tailwindcss from '../../../assets/svg/tailwindcss.svg';
 import bootstrap from '../../../assets/svg/bootstrap.svg';
 import js from '../../../assets/svg/js.svg';
 import ts from '../../../assets/svg/ts.svg';
-import react from "../../../assets/svg/react.svg"
+import react from '../../../assets/svg/react.svg';
+import { useScrollAnim } from '../../../hooks/useScrollAnim';
+import { AnimationControls, motion } from 'framer-motion';
+import { fade } from '../../../animation/animations';
 const techs = [
 	{ name: 'html', svg: html },
 	{ name: 'css', svg: css },
@@ -19,11 +22,17 @@ const techs = [
 ];
 
 export const Techs = () => {
+	const [element, controls] = useScrollAnim();
 	return (
-		<div className=' justify-center mt-20 gap-10 flex flex-wrap'>
+		<motion.div
+			ref={element as React.Ref<HTMLHeadingElement> | undefined}
+			variants={fade}
+			animate={controls as AnimationControls}
+			initial='hidden'
+			className=' justify-center mt-20 gap-10 flex flex-wrap'>
 			{techs.map((tech) => (
 				<TechCard key={tech.name} name={tech.name} svg={tech.svg} />
 			))}
-		</div>
+		</motion.div>
 	);
 };

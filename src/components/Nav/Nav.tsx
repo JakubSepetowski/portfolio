@@ -1,24 +1,16 @@
 import { NavLink } from 'react-router-dom';
 import { NavContext } from '../../store/nav-context';
-import { useContext, } from 'react';
-import { motion, Variants } from 'framer-motion';
+import { useContext } from 'react';
 
 export const Nav = () => {
 	const { isOpen, closeNav } = useContext(NavContext);
 
-	const navAnimation: Variants = {
-		hidden: { opacity: 0 },
-		show: { opacity: 1, transition: { duration: 1.5, delay: 2.5 } },
-	};
 	const closeMoblieNavHandler = () => {
 		closeNav();
 	};
-	
+
 	return (
-		<motion.nav
-			variants={navAnimation}
-			initial='hidden'
-			animate='show'
+		<nav
 			className={`w-3/5 fixed  md:w-full z-30 md:translate-x-0 transition-transform duration-300 ${
 				isOpen ? 'translate-x-0 shadow-md' : 'translate-x-[-105%] shadow-none'
 			}`}>
@@ -75,6 +67,6 @@ export const Nav = () => {
 					</NavLink>
 				</div>
 			</div>
-		</motion.nav>
+		</nav>
 	);
 };

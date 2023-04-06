@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { cardAnim} from "../../../animation/animations";
 
 interface Props {
 	name: string;
@@ -5,9 +7,10 @@ interface Props {
 }
 
 export const TechCard = (props: Props) => {
+	
 	return (
-		<div className='w-20 md:w-24 lg:w-28 duration-200 transition-transform hover:scale-105'>
+		<motion.div variants={cardAnim} className='w-20 md:w-24 lg:w-28 duration-200 transition-transform hover:scale-105'>
 			<img src={props.svg} alt={props.name} />
-		</div>
+		</motion.div>
 	);
 };
