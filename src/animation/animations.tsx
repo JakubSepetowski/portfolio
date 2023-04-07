@@ -27,11 +27,11 @@ export const titleAnim: Variants = {
 		opacity: 1,
 		transition: {
 			duration: 1,
-			ease: 'easeInOut',
+			ease: 'easeOut',
 		},
 	},
 };
-export const textAnim: Variants = {
+export const goUpAnim: Variants = {
 	hidden: {
 		opacity: 0,
 		y: 250,
@@ -41,10 +41,25 @@ export const textAnim: Variants = {
 		opacity: 1,
 		transition: {
 			duration: 1,
-			ease: 'easeInOut',
+			ease: 'easeOut',
 		},
 	},
 };
+export const goRight: Variants = {
+	hidden: {
+		opacity: 0,
+		x: -250,
+	},
+	show: {
+		x: 0,
+		opacity: 1,
+		transition: {
+			duration: 1,
+			ease: 'easeOut',
+		},
+	},
+};
+
 export const fade: Variants = {
 	hidden: {
 		opacity: 0,
@@ -52,10 +67,10 @@ export const fade: Variants = {
 	show: {
 		opacity: 1,
 		transition: {
-			duration: 1,
+			duration: 0.8,
 			when: 'beforeChildren',
-			staggerChildren: 0.5,
-			ease:"easeOut"
+			staggerChildren: 0.4,
+			ease: 'easeOut',
 		},
 	},
 };
@@ -68,18 +83,19 @@ export const scaleAnim: Variants = {
 		scale: 1,
 		transition: {
 			duration: 0.8,
-			
+			ease: 'easeOut',
 		},
 	},
 };
 export const cardAnim: Variants = {
 	hidden: {
-		opacity:0
+		opacity: 0,
 	},
 	show: {
 		opacity: 1,
 		transition: {
-			duration: 0.7,
+			duration: 0.6,
+			ease: 'easeOut',
 		},
 	},
 };

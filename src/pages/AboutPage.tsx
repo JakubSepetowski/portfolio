@@ -10,7 +10,7 @@ export const AboutPage = () => {
 	useScrollTop();
 
 	return (
-		<motion.div variants={pageAnimation} initial='hidden' animate='show'>
+		<motion.div variants={pageAnimation}  initial='hidden' animate='show'  >
 			<AboutHeader />
 			<main>
 				<TechSection />

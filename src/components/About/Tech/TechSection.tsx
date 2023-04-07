@@ -4,8 +4,7 @@ import fullstack from '../../../assets/lotties/fullstack.json';
 import { Section } from '../../common/Section';
 import { AnimationControls } from 'framer-motion';
 import { motion } from 'framer-motion';
-import { fade,textAnim } from '../../../animation/animations';
-
+import { fade,goUpAnim  } from '../../../animation/animations';
 import { useScrollAnim } from '../../../hooks/useScrollAnim';
 
 export const TechSection = () => {
@@ -25,7 +24,7 @@ export const TechSection = () => {
 			<Techs />
 			<motion.div
 				ref={div as React.Ref<HTMLHeadingElement> | undefined}
-				variants={textAnim}
+				variants={goUpAnim}
 				animate={divControlls as AnimationControls}
 				initial='hidden'>
 				<Player className=' md:w-1/2 lg:1/3' autoplay loop src={fullstack}></Player>

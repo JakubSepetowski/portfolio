@@ -38,14 +38,8 @@ export const ProjectInfoHeader = ({ details }: Props) => {
 	}
 	return (
 		<>
-			<Header
-				title={details.title}
-				category='overview.'
-				text={details.overview}
-				src={lottie}
-			
-			/>
-			<ProjectInfoMain details={details}/>
+			<Header title={details.title} category='overview.' text={details.overview} src={lottie} />
+			<ProjectInfoMain details={details} />
 		</>
 	);
 };

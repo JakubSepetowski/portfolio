@@ -6,7 +6,7 @@ import { AboutPage } from './pages/AboutPage';
 import { ProjectsPage } from './pages/ProjectsPage';
 import { ContactPage } from './pages/ContactPage';
 import { ProjectDetailsPage, getPageData } from './pages/ProjectDetalisPage';
-import { AnimatePresence } from 'framer-motion';
+
 
 const router = createBrowserRouter([
 	{
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
 			{ index: true, element: <HomePage /> },
 			{
 				path: 'about',
-				element: <AboutPage />, 
+				element: <AboutPage />,
 			},
 			{
 				path: 'projects',
@@ -37,10 +37,5 @@ const router = createBrowserRouter([
 ]);
 
 export const App = () => {
-	
-	return (
-		<AnimatePresence mode='wait' >
-			<RouterProvider router={router}   />
-		</AnimatePresence>
-	);
+	return <RouterProvider router={router} />;
 };
