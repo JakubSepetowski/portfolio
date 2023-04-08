@@ -45,6 +45,20 @@ export const goUpAnim: Variants = {
 		},
 	},
 };
+export const goDownAnim: Variants = {
+	hidden: {
+		opacity: 0,
+		y: -250,
+	},
+	show: {
+		y: 0,
+		opacity: 1,
+		transition: {
+			duration: 0.7,
+			ease: 'easeOut',
+		},
+	},
+};
 export const goRight: Variants = {
 	hidden: {
 		opacity: 0,
@@ -73,6 +87,7 @@ export const fade: Variants = {
 			ease: 'easeOut',
 		},
 	},
+	
 };
 
 export const scaleAnim: Variants = {

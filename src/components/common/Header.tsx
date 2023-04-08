@@ -1,7 +1,9 @@
 import { Player } from '@lottiefiles/react-lottie-player';
 import { motion } from 'framer-motion';
 import { titleAnim, goUpAnim, scaleAnim, goRight } from '../../animation/animations';
-
+import { useInView } from 'react-intersection-observer';
+import { useEffect, useContext } from 'react';
+import { NavContext } from '../../store/nav-context';
 
 interface Props {
 	title: string;
@@ -11,8 +13,15 @@ interface Props {
 }
 
 export const Header = (props: Props) => {
+	const [element, view] = useInView({ threshold: 0.8 });
+	const { toggleBgc } = useContext(NavContext);
+
+	useEffect(() => {
+		if (view) toggleBgc(false);
+		else toggleBgc(true);
+	}, [view]);
 	return (
-		<header className='h-screen w-full relative overflow-x-hidden'>
+		<header ref={element} className='h-screen w-full relative overflow-x-hidden'>
 			<div className='w-full h-full max-w-7xl flex flex-col md:flex-row justify-center items-center p-8  mx-auto'>
 				<div className='md:w-1/2 self-start md:self-auto'>
 					<motion.p variants={goRight} className='text-sm lg:text-base text-neutral-300'>
