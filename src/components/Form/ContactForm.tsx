@@ -1,17 +1,29 @@
 import { Player } from '@lottiefiles/react-lottie-player';
 import mail from '../../assets/lotties/mail.json';
 import { AnimatePresence, motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { goRight, goUpAnim, titleAnim } from '../../animation/animations';
 import { Form, Formik, Field } from 'formik';
 import { SuccessPopup } from './SuccessPopup';
+import emailjs from '@emailjs/browser';
 import * as Yup from 'yup';
 
+const service = import.meta.env.VITE_SERVICE_ID;
+const template = import.meta.env.VITE_TEMPLATE_ID;
+const key = import.meta.env.VITE_PUBLIC_KEY;
+
 export const ContactForm = () => {
+	const form = useRef<HTMLFormElement>(null);
 	const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+	const [name, setName] = useState('');
 
 	const onCloseHandler = () => {
 		setIsFormSubmitted(false);
+	};
+
+	const sendEmail = async () => {
+		const res = await emailjs.sendForm(service, template, form.current!, key);
+		if (res.text === 'OK') setIsFormSubmitted(true);
 	};
 	return (
 		<Formik
@@ -33,16 +45,16 @@ export const ContactForm = () => {
 					.required('Message is required'),
 			})}
 			onSubmit={(values, { setSubmitting, resetForm }) => {
-				// alert(JSON.stringify(values, null, 2));
 				setSubmitting(false);
-				setIsFormSubmitted(true);
+				setName(values.name);
+				sendEmail();
 				resetForm();
 			}}>
 			{(formik) => {
 				return (
 					<main className='w-full h-screen overflow-hidden relative'>
 						<div className='mx-auto h-full w-full max-w-7xl p-8 flex flex-col md:flex-row justify-center items-center'>
-							<Form className='md:w-1/2'>
+							<Form ref={form} className='md:w-1/2'>
 								<motion.p variants={goRight} className='text-sm lg:text-base text-neutral-300'>
 									email
 								</motion.p>
@@ -123,7 +135,7 @@ export const ContactForm = () => {
 							</div>
 						</div>
 						<AnimatePresence>
-							{isFormSubmitted && <SuccessPopup onClose={onCloseHandler} />}
+							{isFormSubmitted && <SuccessPopup name={name} onClose={onCloseHandler} />}
 						</AnimatePresence>
 					</main>
 				);

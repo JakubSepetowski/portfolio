@@ -1,15 +1,16 @@
 import { Player } from '@lottiefiles/react-lottie-player';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClose } from '@fortawesome/free-solid-svg-icons';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import send from '../../assets/lotties/send.json';
-import { titleAnim, fade, goUpAnim, goDownAnim } from '../../animation/animations';
+
 
 interface Props {
 	onClose: () => void;
+    name:string
 }
 
-export const SuccessPopup = ({ onClose }: Props) => {
+export const SuccessPopup = ({ onClose,name }: Props) => {
 	const onCloseHandler = () => {
 		onClose();
 	};
@@ -33,8 +34,7 @@ export const SuccessPopup = ({ onClose }: Props) => {
 					<FontAwesomeIcon icon={faClose} />
 				</button>
 				<h2 className='mt-2 text-xl  md:text-3xl'>
-					Thank you for your <span className='text-orange-400 '>message</span> and{' '}
-					<span className='text-orange-400'>trust</span>
+					Thank you <span className='text-orange-400 '>{name}</span> for your message
 				</h2>
 				<p className='mt-2 text-lg md:text-2xl '>I will contact you as soon as possible!</p>
 				<div className='w-32 md:w-52'>
