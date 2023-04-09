@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import error from '../assets/lotties/404.json';
 
 
-export const ErrorPage = () => {
+function ErrorPage () {
 	
 	return (
 		<div className='flex flex-col justify-center items-center h-screen w-full relative max-w-7xl mx-auto p-4'>
@@ -17,3 +17,4 @@ export const ErrorPage = () => {
 		</div>
 	);
 };
+export default ErrorPage

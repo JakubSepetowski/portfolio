@@ -6,11 +6,11 @@ import { useScrollTop } from '../hooks/useScrollTop';
 import { motion } from 'framer-motion';
 import { pageAnimation } from '../animation/animations';
 
-export const AboutPage = () => {
+function AboutPage() {
 	useScrollTop();
 
 	return (
-		<motion.div variants={pageAnimation}  initial='hidden' animate='show'  >
+		<motion.div variants={pageAnimation} initial='hidden' animate='show'>
 			<AboutHeader />
 			<main>
 				<TechSection />
@@ -19,4 +19,5 @@ export const AboutPage = () => {
 			<Footer />
 		</motion.div>
 	);
-};
+}
+export default AboutPage

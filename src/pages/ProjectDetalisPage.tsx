@@ -5,6 +5,8 @@ import { useScrollTop } from '../hooks/useScrollTop';
 import { Footer } from '../components/Footer/Footer';
 import { motion } from 'framer-motion';
 import { pageAnimation } from '../animation/animations';
+
+
 export const getPageData: LoaderFunction = async ({ params }) => {
 	const res = await fetch('/projetcsInfo.json');
 	const data: ProjectDetails[] = await res.json();
@@ -12,7 +14,7 @@ export const getPageData: LoaderFunction = async ({ params }) => {
 	return projectInfo[0];
 };
 
-export const ProjectDetailsPage = () => {
+function ProjectDetailsPage() {
 	useScrollTop();
 	const projectDetails = useLoaderData() as ProjectDetails;
 
@@ -22,4 +24,6 @@ export const ProjectDetailsPage = () => {
 			<Footer />
 		</motion.div>
 	);
-};
+}
+
+export default ProjectDetailsPage;

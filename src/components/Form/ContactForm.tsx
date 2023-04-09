@@ -63,8 +63,8 @@ export const ContactForm = () => {
 			{(formik) => {
 				return (
 					<main className='w-full h-screen overflow-hidden relative'>
-						<div className='mx-auto h-full w-full max-w-7xl p-8 flex flex-col md:flex-row justify-center items-center'>
-							<Form ref={form} className='md:w-1/2'>
+						<div className='mx-auto h-full w-full max-w-7xl p-8  flex flex-col md:flex-row justify-center items-center'>
+							<Form ref={form} className='w-full md:w-1/2'>
 								<motion.p variants={goRight} className='text-sm lg:text-base text-neutral-300'>
 									email
 								</motion.p>

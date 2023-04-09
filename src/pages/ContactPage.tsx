@@ -4,7 +4,7 @@ import { pageAnimation } from "../animation/animations";
 import { useContext, useEffect } from "react";
 import { NavContext } from "../store/nav-context";
 
-export const ContactPage = () => {
+function ContactPage ()  {
 	const { toggleBgc } = useContext(NavContext);
 	useEffect(()=>{
 		toggleBgc(false)
@@ -15,3 +15,4 @@ export const ContactPage = () => {
 		</motion.div>
 	);
 };
+export default ContactPage

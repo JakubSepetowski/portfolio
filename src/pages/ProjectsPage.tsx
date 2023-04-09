@@ -5,7 +5,7 @@ import { useScrollTop } from '../hooks/useScrollTop';
 import { motion } from 'framer-motion';
 import { pageAnimation } from '../animation/animations';
 
-export const ProjectsPage = () => {
+ function ProjectsPage  () {
 	useScrollTop();
 	return (
 		<motion.div variants={pageAnimation} initial='hidden' animate='show'>
@@ -17,3 +17,4 @@ export const ProjectsPage = () => {
 		</motion.div>
 	);
 };
+export default ProjectsPage

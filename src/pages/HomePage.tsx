@@ -4,14 +4,15 @@ import { pageAnimation } from '../animation/animations';
 import { useContext, useEffect } from 'react';
 import { NavContext } from '../store/nav-context';
 
-export const HomePage = () => {
+ function HomePage() {
 	const { toggleBgc } = useContext(NavContext);
-	useEffect(()=>{
-		toggleBgc(false)
-	},[])
+	useEffect(() => {
+		toggleBgc(false);
+	}, []);
 	return (
-		<motion.div variants={pageAnimation} initial='hidden' animate='show'  >
-			<Home  />
+		<motion.div variants={pageAnimation} initial='hidden' animate='show'>
+			<Home />
 		</motion.div>
 	);
-};
+}
+export default HomePage
