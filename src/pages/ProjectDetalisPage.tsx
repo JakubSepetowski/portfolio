@@ -14,7 +14,7 @@ export const getPageData: LoaderFunction = async ({ params }) => {
 	return projectInfo[0];
 };
 
-function ProjectDetailsPage() {
+export const ProjectDetailsPage=()=> {
 	useScrollTop();
 	const projectDetails = useLoaderData() as ProjectDetails;
 

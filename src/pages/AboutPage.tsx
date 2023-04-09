@@ -6,7 +6,7 @@ import { useScrollTop } from '../hooks/useScrollTop';
 import { motion } from 'framer-motion';
 import { pageAnimation } from '../animation/animations';
 
-function AboutPage() {
+export const AboutPage=()=> {
 	useScrollTop();
 
 	return (
@@ -20,4 +20,3 @@ function AboutPage() {
 		</motion.div>
 	);
 }
-export default AboutPage

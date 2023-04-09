@@ -1,65 +1,38 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { lazy, Suspense } from 'react';
 import { RootLayout } from './pages/RootLayout';
-import { getPageData } from './pages/ProjectDetalisPage';
-
-const HomePage = lazy(() => import('./pages/HomePage'));
-const AboutPage = lazy(() => import('./pages/AboutPage'));
-const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
-const ContactPage = lazy(() => import('./pages/ContactPage'));
-const ProjectDetailsPage = lazy(() => import('./pages/ProjectDetalisPage'));
-const ErrorPage = lazy(() => import('./pages/ErrorPage'));
+import ProjectDetailsPage, { getPageData } from './pages/ProjectDetalisPage';
+import { AboutPage } from './pages/AboutPage';
+import { ContactPage } from './pages/ContactPage';
+import ErrorPage from './pages/ErrorPage';
+import { HomePage } from './pages/HomePage';
+import ProjectsPage from './pages/ProjectsPage';
 
 const router = createBrowserRouter([
 	{
 		path: '/',
 		element: <RootLayout />,
-		errorElement: (
-			<Suspense>
-				<ErrorPage />
-			</Suspense>
-		),
+		errorElement: <ErrorPage />,
 		children: [
 			{
 				index: true,
-				element: (
-					<Suspense>
-						<HomePage />
-					</Suspense>
-				),
+				element: <HomePage />,
 			},
 			{
 				path: 'about',
-				element: (
-					<Suspense>
-						<AboutPage />
-					</Suspense>
-				),
+				element: <AboutPage />,
 			},
 			{
 				path: 'projects',
-				element: (
-					<Suspense>
-						<ProjectsPage />
-					</Suspense>
-				),
+				element: <ProjectsPage />,
 			},
 			{
 				path: 'projects/project/:projectId',
-				element: (
-					<Suspense>
-						<ProjectDetailsPage />
-					</Suspense>
-				),
+				element: <ProjectDetailsPage />,
 				loader: getPageData,
 			},
 			{
 				path: 'contact',
-				element: (
-					<Suspense>
-						<ContactPage />
-					</Suspense>
-				),
+				element: <ContactPage />,
 			},
 		],
 	},
