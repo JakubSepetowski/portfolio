@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useState, useRef } from 'react';
 import { goRight, goUpAnim, titleAnim } from '../../animation/animations';
 import { Form, Formik, Field } from 'formik';
-import { SuccessPopup } from './SuccessPopup';
+import { Popup } from './Popup';
 import emailjs from '@emailjs/browser';
 import * as Yup from 'yup';
 
@@ -15,6 +15,8 @@ const key = import.meta.env.VITE_PUBLIC_KEY;
 export const ContactForm = () => {
 	const form = useRef<HTMLFormElement>(null);
 	const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+	const [isFormSend, setIsFormSend] = useState(false);
+	const [isSending, setIsSending] = useState(false);
 	const [name, setName] = useState('');
 
 	const onCloseHandler = () => {
@@ -22,8 +24,15 @@ export const ContactForm = () => {
 	};
 
 	const sendEmail = async () => {
-		const res = await emailjs.sendForm(service, template, form.current!, key);
-		if (res.text === 'OK') setIsFormSubmitted(true);
+		try {
+			const res = await emailjs.sendForm(service, template, form.current!, key);
+			if (res.text === 'OK') setIsFormSend(true);
+		} catch (err) {
+			setIsFormSend(false);
+		}
+
+		setIsFormSubmitted(true);
+		setIsSending(false);
 	};
 	return (
 		<Formik
@@ -47,6 +56,7 @@ export const ContactForm = () => {
 			onSubmit={(values, { setSubmitting, resetForm }) => {
 				setSubmitting(false);
 				setName(values.name);
+				setIsSending(true);
 				sendEmail();
 				resetForm();
 			}}>
@@ -120,14 +130,17 @@ export const ContactForm = () => {
 								</motion.div>
 
 								<motion.div variants={goUpAnim} className='w-full text-right mt-5'>
-									<button
-										disabled={!(formik.dirty && formik.isValid)}
-										type='submit'
-										className={`transition-colors duration-200 md:text-2xl ${
-											!(formik.dirty && formik.isValid) ? 'text-white' : 'text-orange-400'
-										}`}>
-										Submit
-									</button>
+									{!isSending && (
+										<button
+											disabled={!(formik.dirty && formik.isValid)}
+											type='submit'
+											className={`transition-colors duration-200 md:text-2xl ${
+												!(formik.dirty && formik.isValid) ? 'text-white' : 'text-orange-400'
+											}`}>
+											Submit
+										</button>
+									)}
+									{isSending && <p className='loading md:text-2xl p-2 text-orange-400'>Sending</p>}
 								</motion.div>
 							</Form>
 							<div className='mt-5 md:mt-0 md:w-1/2'>
@@ -135,7 +148,9 @@ export const ContactForm = () => {
 							</div>
 						</div>
 						<AnimatePresence>
-							{isFormSubmitted && <SuccessPopup name={name} onClose={onCloseHandler} />}
+							{isFormSubmitted && (
+								<Popup name={name} isSuccess={isFormSend} onClose={onCloseHandler} />
+							)}
 						</AnimatePresence>
 					</main>
 				);

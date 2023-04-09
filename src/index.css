@@ -18,12 +18,32 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
+textarea:-webkit-autofill:focus {
 	border: none;
 	-webkit-text-fill-color: #fb923c;
 	-webkit-box-shadow: none;
 	transition: background-color 5000s ease-in-out 0s;
+}
+.loading:after {
+	content: ' .';
+	animation: dots 1s steps(5, end) infinite;
+}
+
+@keyframes dots {
+	0%,
+	20% {
+		color: rgba(0, 0, 0, 0);
+		text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+	}
+	40% {
+		color: #fb923c;
+		text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+	}
+	60% {
+		text-shadow: 0.25em 0 0 #fb923c, 0.5em 0 0 rgba(0, 0, 0, 0);
+	}
+	80%,
+	100% {
+		text-shadow: 0.25em 0 0 #fb923c, 0.5em 0 0 #fb923c;
+	}
 }

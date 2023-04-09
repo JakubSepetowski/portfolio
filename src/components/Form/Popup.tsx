@@ -4,13 +4,13 @@ import { faClose } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import send from '../../assets/lotties/send.json';
 
-
 interface Props {
 	onClose: () => void;
-    name:string
+	name: string;
+	isSuccess: boolean;
 }
 
-export const SuccessPopup = ({ onClose,name }: Props) => {
+export const Popup = ({ onClose, name, isSuccess }: Props) => {
 	const onCloseHandler = () => {
 		onClose();
 	};
@@ -33,13 +33,26 @@ export const SuccessPopup = ({ onClose,name }: Props) => {
 					className='text-lg md:text-2xl absolute text-white right-0 top-[-40px] '>
 					<FontAwesomeIcon icon={faClose} />
 				</button>
-				<h2 className='mt-2 text-xl  md:text-3xl'>
-					Thank you <span className='text-orange-400 '>{name}</span> for your message
-				</h2>
-				<p className='mt-2 text-lg md:text-2xl '>I will contact you as soon as possible!</p>
-				<div className='w-32 md:w-52'>
-					<Player className='w-full' autoplay keepLastFrame src={send}></Player>
-				</div>
+				{isSuccess && (
+					<>
+						<h2 className='mt-2 text-xl  md:text-3xl'>
+							Thank you <span className='text-orange-400 '>{name}</span> for your message
+						</h2>
+						<p className='mt-2 text-lg md:text-2xl '>I will contact you as soon as possible!</p>
+						<div className='w-32 md:w-52'>
+							<Player className='w-full' autoplay keepLastFrame src={send}></Player>
+						</div>
+					</>
+				)}
+				{!isSuccess && (
+					<>
+						<h2 className='mt-2 text-xl  md:text-3xl'>Oops something went wrong..</h2>
+						<p className='mt-2 text-lg md:text-2xl '>
+							Try again later or send me a message directly at:{' '}
+							<span className='text-orange-400'>jakubsepetowskipraca@gmail.com</span>
+						</p>
+					</>
+				)}
 			</motion.div>
 		</motion.div>
 	);

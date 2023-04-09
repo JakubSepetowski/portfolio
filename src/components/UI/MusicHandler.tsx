@@ -16,7 +16,7 @@ export const MusicHandler = () => {
 		setIsPlaying((prev) => !prev);
 	};
 	return (
-		<div className='fixed bottom-14 right-10'>
+		<div className='fixed bottom-4 right-4'>
 			<button
 				onClick={playMusicHandler}
 				className={`bg-orange-400 rounded-full w-10 h-10 p-2 md:w-12 md:h-12 lg:w-16 lg:h-16 md:p-4 flex justify-center items-center  hover:bg-opacity-100 transition-colors duration-300  ${
