@@ -11,7 +11,7 @@
 			"React-redux",
 			"Rest API"
 		],
-		"repoLink": "https://github.com/JakubSepetowski/news",
+		"repoLink": "https://github.com/sepetowski/news",
 		"liveLink": null
 	},
 	{
@@ -19,15 +19,15 @@
 		"description": "This is a large component that I created as a challenge from the frontendmentor. The form is fully responsive, it has validation to be able to move to the next step. The current step is highlighted, we can also go back to previous steps without losing the current state, everything is saved in real time with help of context api. The form has 4 steps, each of which is different in its own way.",
 		"overview": "If you are one of those people who hate filling out forms, you need to check out this one out! This eye-pleasing and easy-to-complete form is sure to make you change your mind.",
 		"technologies": ["React", "TypeScript", "Tailwindcss", "React Context API"],
-		"repoLink": "https://github.com/JakubSepetowski/MultiForm",
+		"repoLink": "https://github.com/sepetowski/MultiForm",
 		"liveLink": "https://mutlistepform.netlify.app/"
 	},
 	{
 		"title": "Recipe app",
 		"description": "This is an application where you can search for your recipes for various dishes. In addition, once you have found a recipe you are interested in, you can enter it to see what the average preparation time is, how many servings the dish is for, and what ingredients are needed in what quantities. In addition, there is a link leading to a page where the recipe is described step by step. As if that wasn't enough, recipes can be saved as favorites and quickly navigated through them thanks to a side tab. The application is fully responsive.",
 		"overview": "Do you have a taste for pizza? Or do you want to cook something for a date? Recipe app will help you with that! Here you will find recipes for all the dishes you can think of. In addition, you will have information about preparation time and number of servings. Check it out for yourself!",
-		"technologies": ["Html", "TypeScript", "Sass" ,"Rest API"],
-		"repoLink": "https://github.com/JakubSepetowski/recipe-app",
+		"technologies": ["Html", "TypeScript", "Sass", "Rest API"],
+		"repoLink": "https://github.com/sepetowski/recipe-app",
 		"liveLink": "https://jakubsepetowski-recipeapp.netlify.app/"
 	},
 	{
@@ -35,7 +35,7 @@
 		"description": "In this application you are able to search all the countries of the world to find out interesting information, such as the population, or the name of the country in the native language. In addition, you can filter countries by the region they are located in. If you are interested in a country and click on it, you will see more details, such as its neighbors (if it has any), which can be accessed directly by clicking on the neighbor code. The application is fully responsive and has options to change the theme.",
 		"overview": "Are you planning a trip to a country and want to learn more about it? Rest Countries will allow you to check not only the flag of a country, but also the language used, and you will also be able to see what countries border the country you are visiting.",
 		"technologies": ["React", "TypeScript", "Tailwindcss", "React-redux", "Rest API"],
-		"repoLink": "https://github.com/JakubSepetowski/rest-countries",
+		"repoLink": "https://github.com/sepetowski/rest-countries",
 		"liveLink": "https://mycountry-info.netlify.app/"
 	},
 	{
@@ -43,15 +43,15 @@
 		"description": "This is an application that allows you to better organize your plans. It is mainly aimed at people who travel a lot. In the app you can save the places you have visited or plan to visit. The app allows you to filter places by different categories. In addition, we can mark places as favorites. What's more, the app shows the current temperature of the place. It is designed for computers and large screens only.",
 		"overview": "If your passion is traveling and at the same time you are an organized person then this app is perfect for you! TravelMark will allow you to mark all the places you have already visited, making it easier to keep them in your memories. Above that, you will be able to plan your next trips with ease. Click and see for yourself!",
 		"technologies": ["Html", "JavaScript", "Sass", "Wheater API", "Leaflet"],
-		"repoLink": "https://github.com/JakubSepetowski/Travell-mark-app",
-		"liveLink": "https://jakubsepetowski.github.io/Travell-mark-app/"
+		"repoLink": "https://github.com/sepetowski/Travell-mark-app",
+		"liveLink": "https://sepetowski.github.io/Travell-mark-app/"
 	},
 	{
 		"title": "E-product",
 		"description": "This is a project done as a frontend challenge, which consisted of making a product page. The site has a working shopping cart to which we can add and subtract product. The site also has a slider with photos of shoes. It is a small site, but in the future I plan to develop it as an entire e-commerce site. It is fully responsive.",
 		"overview": "Do you love to shop online? This website will make it easy for you! E-product is simple and easy to use, making your shopping experience even more enjoyable. Check it out for yourself!",
 		"technologies": ["React", "TypeScript", "Tailwindcss"],
-		"repoLink": "https://github.com/JakubSepetowski/ecommerce-product",
+		"repoLink": "https://github.com/sepetowski/ecommerce-product",
 		"liveLink": "https://e-prodcut-react.netlify.app/"
 	}
 ]
