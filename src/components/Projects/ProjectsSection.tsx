@@ -1,5 +1,7 @@
 import { Section } from '../common/Section';
 import { ProjetCard } from './ProjectCard';
+import portfolio from '../../assets/img/portfolioProj.png';
+import noted from '../../assets/img/justNotedProj.png';
 import form from '../../assets/img/formProj.png';
 import rest from '../../assets/img/restProj.png';
 import eproduct from '../../assets/img/eprodcutProj.png';
@@ -36,6 +38,20 @@ export const ProjectsSection = () => {
 				animate={mainControlls as AnimationControls}
 				initial='hidden'
 				className='w-full flex flex-col justify-center gap-5  '>
+				<div className='flex flex-wrap md:flex-nowrap gap-5 '>
+					<ProjetCard
+						isBig={false}
+						img={portfolio}
+						title='Portfolio'
+						text='Is this my personal side?'
+					/>
+					<ProjetCard
+						isBig={true}
+						img={noted}
+						title='JustNoted'
+						text='Do you also like to take notes and personalzation?'
+					/>
+				</div>
 				<div className='flex flex-wrap md:flex-nowrap gap-5 '>
 					<ProjetCard
 						isBig={true}

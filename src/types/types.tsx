@@ -1,11 +1,10 @@
 export interface ProjectDetails {
 	title: string;
 	description: string;
-    overview: string;
+	overview: string;
 	technologies: string[];
 	repoLink: string;
 	liveLink: string | null;
-
 }
 export enum Titles {
 	news = 'GnNews',
@@ -14,4 +13,6 @@ export enum Titles {
 	countries = 'Rest countries',
 	maps = 'Travel mark',
 	shop = 'E-product',
+	portfolio = 'Portfolio',
+	noted = 'JustNoted',
 }

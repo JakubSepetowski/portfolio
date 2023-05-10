@@ -8,7 +8,8 @@ import form from '../../assets/lotties/form.json';
 import maps from '../../assets/lotties/maps.json';
 import news from '../../assets/lotties/news.json';
 import shop from '../../assets/lotties/shop.json';
-
+import notes from '../../assets/lotties/notes.json';
+import laptop from '../../assets/lotties/laptop.json';
 
 type Props = {
 	details: ProjectDetails;
@@ -34,6 +35,12 @@ export const ProjectInfoHeader = ({ details }: Props) => {
 			break;
 		case Titles.shop:
 			lottie = shop;
+			break;
+		case Titles.portfolio:
+			lottie = laptop;
+			break;
+		case Titles.noted:
+			lottie = notes;
 			break;
 	}
 	return (

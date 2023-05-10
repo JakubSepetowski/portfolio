@@ -1,5 +1,42 @@
 [
 	{
+		"title": "JustNoted",
+		"description": "JustNoted is a fully responsive note app that allows users to create notes, edit them, mark them as favorites and delete them (the app has a trash function - deleted notes go to the trash first, so if something happens, they can be recovered). In addition, the app has an edit history, so users can see what changes have occurred to a particular note. The application has an integrated calendar - when we create a note (with our permission) in the calendar, the application creates a note, so we can easily keep track of what tasks we have for the day. In addition, we can change the color of the notes and personalize them from a palette of 7 colors, so we can plan a hierearchy of notes as we like.The application itself requires creating an account - it uses firebase, so you can log in using google. It is also possible to customize your profile - change your username, profile picture and change your password. What's more, you can also delete your accoun if you decide to.",
+		"overview": "Justnoted is my most complex project. JustNoted using firebase- it has its own database and authorization system. The user must create an account to use the application. The application is primarily used for taking notes. In addition, the user has a calendar integrated with these notes, so organization through this application is very easy.",
+		"technologies": [
+			"React",
+			"TypeScript",
+			"Tailwindcss",
+			"React-router",
+			"React-redux",
+			"Firebase",
+			"Formik",
+			"Framer motion",
+			"Dayjs",
+			"Fontawsome",
+			"React-hook/media-query"
+		],
+		"repoLink": "https://github.com/sepetowski/justnoted",
+		"liveLink": "https://justnoted.netlify.app/"
+	},
+	{
+		"title": "Portfolio",
+		"description": "This site is dedicated to me, I created it so that I could easily share my projects with others and make it easier to access and contact me, I spent a lot of time creating it from scratch, from desgin to code to animations.",
+		"overview": "Yes, this is the page you are currently on, I hope you like it ",
+		"technologies": [
+			"React",
+			"TypeScript",
+			"Tailwindcss",
+			"React-router",
+			"React-redux",
+			"Framer motion",
+			"Formik",
+			"Emailjs"
+		],
+		"repoLink": "https://github.com/sepetowski/portfolio",
+		"liveLink": "https://sepetowski.netlify.app/"
+	},
+	{
 		"title": "GnNews",
 		"description": "This is an application dedicated to news. The user will see news for his country, thanks to an api that returns the country for the user's ip address. It is also possible to select from a list of available countries. The page shows the number of news items that are currently available and the current time.When you click on a particular news item, a popup will appear with the content and a link to the article. It is possible to switch the news view from tiles to a list, and the page has a choice of dark or light mode.",
 		"overview": "Are you interested in what's happening in the world? Do you like to keep up to date with news in your country? Check out GnNews! There you will find news not only from your country, but also from all over the world.In addition, the application is fully responsive",
