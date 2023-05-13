@@ -49,7 +49,7 @@ export const ProjectsSection = () => {
 						isBig={true}
 						img={noted}
 						title='JustNoted'
-						text='Do you also like to take notes and personalzation?'
+						text='Do you like to have all your thoughts in one place?'
 					/>
 				</div>
 				<div className='flex flex-wrap md:flex-nowrap gap-5 '>
