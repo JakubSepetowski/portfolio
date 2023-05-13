@@ -8,7 +8,7 @@ type Props = {
 };
 
 export const ProjectInfoMain = ({ details }: Props) => {
-	const [el, elControlls] = useScrollAnim();
+	const [el, elControlls] = useScrollAnim(0.1);
 	return (
 		<motion.main
 			ref={el as React.Ref<HTMLHeadingElement> | undefined}
@@ -17,18 +17,34 @@ export const ProjectInfoMain = ({ details }: Props) => {
 			initial='hidden'
 			className='w-full max-w-7xl mx-auto p-8  text-center overflow-x-hidden'>
 			<div className=' mb-8 md:mb-2 text-left'>
-				<motion.h2 variants={titleAnim} className='mb-2 text-3xl text-orange-400  md:text-4xl lg:text-5xl'>Description</motion.h2>
+				<motion.h2
+					variants={titleAnim}
+					className='mb-2 text-3xl text-orange-400  md:text-4xl lg:text-5xl'>
+					Description
+				</motion.h2>
 
-				<motion.p variants={goRight} className='md:text-lg lg:text-xl md:w-3/5'>{details.description}</motion.p>
+				<motion.p variants={goRight} className='md:text-lg lg:text-xl md:w-3/5'>
+					{details.description}
+				</motion.p>
 			</div>
 
 			<div className=' mb-8 md:mb-2 text-right'>
-				<motion.h2 variants={goRight} className='mb-2  text-3xl  text-orange-400 md:text-4xl lg:text-5xl'>Technologies</motion.h2>
-				<motion.p variants={titleAnim} className='md:text-lg lg:text-xl w-full '>{details.technologies.join(' ')}</motion.p>
+				<motion.h2
+					variants={goRight}
+					className='mb-2  text-3xl  text-orange-400 md:text-4xl lg:text-5xl'>
+					Technologies
+				</motion.h2>
+				<motion.p variants={titleAnim} className='md:text-lg lg:text-xl w-full '>
+					{details.technologies.join(' ')}
+				</motion.p>
 			</div>
 
 			<div className='mb-8 md:mb-2 text-left'>
-				<motion.h2 variants={titleAnim} className='mb-2 text-3xl text-orange-400   md:text-4xl lg:text-5xl'>Links</motion.h2>
+				<motion.h2
+					variants={titleAnim}
+					className='mb-2 text-3xl text-orange-400   md:text-4xl lg:text-5xl'>
+					Links
+				</motion.h2>
 				{details.liveLink && (
 					<motion.div variants={goRight}>
 						<p className='md:text-lg lg:text-xl w-full'>

@@ -12,8 +12,8 @@ import { motion, AnimationControls } from 'framer-motion';
 import { fade, goRight, titleAnim } from '../../animation/animations';
 import { useScrollAnim } from '../../hooks/useScrollAnim';
 export const ProjectsSection = () => {
-	const [top, topControlls] = useScrollAnim();
-	const [main, mainControlls] = useScrollAnim();
+	const [top, topControlls] = useScrollAnim(0.1);
+	const [main, mainControlls] = useScrollAnim(0.2);
 	return (
 		<Section>
 			<motion.div

@@ -2,10 +2,10 @@ import { Section } from '../../common/Section';
 import guitar from '../../../assets/svg/guitar.svg';
 import { useScrollAnim } from '../../../hooks/useScrollAnim';
 import { AnimationControls, motion } from 'framer-motion';
-import { fade, goRight, goUpAnim, pageAnimation, titleAnim } from '../../../animation/animations';
+import { fade, goRight, goUpAnim, titleAnim } from '../../../animation/animations';
 
 export const HobbySection = () => {
-	const [div, divControlls] = useScrollAnim();
+	const [div, divControlls] = useScrollAnim(0.2);
 
 	return (
 		<Section>
