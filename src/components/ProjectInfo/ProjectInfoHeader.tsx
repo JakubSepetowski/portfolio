@@ -10,6 +10,7 @@ import news from '../../assets/lotties/news.json';
 import shop from '../../assets/lotties/shop.json';
 import notes from '../../assets/lotties/notes.json';
 import laptop from '../../assets/lotties/laptop.json';
+import photo from '../../assets/lotties/photo.json';
 
 type Props = {
 	details: ProjectDetails;
@@ -42,6 +43,8 @@ export const ProjectInfoHeader = ({ details }: Props) => {
 		case Titles.noted:
 			lottie = notes;
 			break;
+		case Titles.natalia:
+			lottie = photo;
 	}
 	return (
 		<>

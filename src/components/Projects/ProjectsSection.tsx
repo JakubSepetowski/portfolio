@@ -1,5 +1,8 @@
 import { Section } from '../common/Section';
 import { ProjetCard } from './ProjectCard';
+import { motion, AnimationControls } from 'framer-motion';
+import { fade, goRight, titleAnim } from '../../animation/animations';
+import { useScrollAnim } from '../../hooks/useScrollAnim';
 import portfolio from '../../assets/img/portfolioProj.png';
 import noted from '../../assets/img/justNotedProj.png';
 import form from '../../assets/img/formProj.png';
@@ -8,9 +11,9 @@ import eproduct from '../../assets/img/eprodcutProj.png';
 import recipe from '../../assets/img/recipeProj.png';
 import travell from '../../assets/img/travellProj.png';
 import news from '../../assets/img/newsProj.png';
-import { motion, AnimationControls } from 'framer-motion';
-import { fade, goRight, titleAnim } from '../../animation/animations';
-import { useScrollAnim } from '../../hooks/useScrollAnim';
+import nataliaSite from '../../assets/img/nataliaSite.png';
+import process from "../../assets/img/process.jpg"
+
 export const ProjectsSection = () => {
 	const [top, topControlls] = useScrollAnim(0.1);
 	const [main, mainControlls] = useScrollAnim(0.2);
@@ -50,6 +53,21 @@ export const ProjectsSection = () => {
 						img={noted}
 						title='JustNoted'
 						text='Do you like to have all your thoughts in one place?'
+					/>
+				</div>
+				<div className='flex flex-wrap md:flex-nowrap gap-5 '>
+					<ProjetCard
+						isBig={true}
+						img={nataliaSite}
+						title='Natalia portfolio'
+						text='Do you need a model for your photos?'
+					/>
+					<ProjetCard
+						isBig={false}
+						img={process}
+						title='Cooming soon...'
+						text="It's a mystery!"
+						commingSoon={true}
 					/>
 				</div>
 				<div className='flex flex-wrap md:flex-nowrap gap-5 '>

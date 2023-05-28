@@ -15,4 +15,5 @@ export enum Titles {
 	shop = 'E-product',
 	portfolio = 'Portfolio',
 	noted = 'JustNoted',
+	natalia="Natalia portfolio"
 }

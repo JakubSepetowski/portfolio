@@ -17,7 +17,7 @@
 			"React-hook/media-query"
 		],
 		"repoLink": "https://github.com/sepetowski/justnoted",
-		"liveLink": "https://justnoted.netlify.app/"
+		"liveLink": "https://justnoted-3c406.web.app"
 	},
 	{
 		"title": "Portfolio",
@@ -50,6 +50,14 @@
 		],
 		"repoLink": "https://github.com/sepetowski/news",
 		"liveLink": null
+	},
+	{
+		"title": "Natalia portfolio",
+		"description": "I created this page for Natalia- my first cilent. The page has a description of who she is and what she does, and a subpage for contacting her. In addition, I created a gallery using Grid, which has the ability to enlarge selected photos. The site has many animations and is fully responsive.",
+		"overview": "If you want to deal seriously, you need passion and commitment to it, and once you have some experience I can help you to create your unique portfolio. And that's exactly what this website is! Its task is to present Natalia, who dreams of a career as a model, from the best possible side and show how much she have already achieved. How about you? Would you like to have your portfolio one day?",
+		"technologies": ["React", "TypeScript", "Tailwindcss", "React-router", "Framer motion"],
+		"repoLink": "https://github.com/sepetowski/NataliaSite",
+		"liveLink": "https://nataliaportfolio.web.app/"
 	},
 	{
 		"title": "Multi step form",

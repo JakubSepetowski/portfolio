@@ -1,4 +1,8 @@
 import { TechCard } from './TechCard';
+import { useScrollAnim } from '../../../hooks/useScrollAnim';
+import { AnimationControls, motion } from 'framer-motion';
+import { fade } from '../../../animation/animations';
+
 import html from '../../../assets/svg/html.svg';
 import css from '../../../assets/svg/css.svg';
 import sass from '../../../assets/svg/sass.svg';
@@ -6,19 +10,29 @@ import tailwindcss from '../../../assets/svg/tailwindcss.svg';
 import bootstrap from '../../../assets/svg/bootstrap.svg';
 import js from '../../../assets/svg/js.svg';
 import ts from '../../../assets/svg/ts.svg';
+import router from '../../../assets/svg/router.svg';
 import react from '../../../assets/svg/react.svg';
-import { useScrollAnim } from '../../../hooks/useScrollAnim';
-import { AnimationControls, motion } from 'framer-motion';
-import { fade } from '../../../animation/animations';
+import redux from '../../../assets/svg/redux.svg';
+import firebase from '../../../assets/svg/firebase.svg';
+import framerMotion from '../../../assets/svg/framerMotion.svg';
+import github from "../../../assets/svg/github.svg"
+import next from "../../../assets/svg/next.svg"
+
 const techs = [
-	{ name: 'html', svg: html },
-	{ name: 'css', svg: css },
-	{ name: 'sass', svg: sass },
-	{ name: 'tailwindcss', svg: tailwindcss },
-	{ name: 'react', svg: react },
-	{ name: 'bootstrap', svg: bootstrap },
-	{ name: 'javaScript', svg: js },
-	{ name: 'typeScript', svg: ts },
+	{ name: 'HTML', svg: html },
+	{ name: 'CSS', svg: css },
+	{ name: 'SASS', svg: sass },
+	{ name: 'Tailwindcss', svg: tailwindcss },
+	{ name: 'Bootstrap', svg: bootstrap },
+	{ name: 'JavaScript', svg: js },
+	{ name: 'TypeScript', svg: ts },
+	{ name: 'React', svg: react },
+	{ name: 'React Router', svg: router },
+	{ name: 'React Redux', svg: redux },
+	{ name: 'Next.js', svg: next },
+	{ name: 'Firebase', svg: firebase },
+	{ name: 'Framer Motion', svg: framerMotion },
+	{ name: 'Github', svg: github },
 ];
 
 export const Techs = () => {
@@ -29,7 +43,7 @@ export const Techs = () => {
 			variants={fade}
 			animate={controls as AnimationControls}
 			initial='hidden'
-			className=' justify-center mt-20 gap-10 flex flex-wrap'>
+			className=' justify-center mt-20 gap-x-10 gap-y-16 flex flex-wrap'>
 			{techs.map((tech) => (
 				<TechCard key={tech.name} name={tech.name} svg={tech.svg} />
 			))}

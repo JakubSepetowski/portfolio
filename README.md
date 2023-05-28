@@ -1,5 +1,10 @@
 # Portfolio
 
+## Live
+
+Check it now!
+https://sepetowskiportfolio.web.app
+
 ## Technologies
 
 React, TypeScript, React-router, Tailwindcss, Formik, Framer motion, Email.js
