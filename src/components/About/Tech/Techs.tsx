@@ -15,7 +15,6 @@ import react from '../../../assets/svg/react.svg';
 import redux from '../../../assets/svg/redux.svg';
 import firebase from '../../../assets/svg/firebase.svg';
 import framerMotion from '../../../assets/svg/framerMotion.svg';
-import github from "../../../assets/svg/github.svg"
 import next from "../../../assets/svg/next.svg"
 
 const techs = [
@@ -32,7 +31,6 @@ const techs = [
 	{ name: 'Next.js', svg: next },
 	{ name: 'Firebase', svg: firebase },
 	{ name: 'Framer Motion', svg: framerMotion },
-	{ name: 'Github', svg: github },
 ];
 
 export const Techs = () => {
